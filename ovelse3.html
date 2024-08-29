@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Gæt et tal</h1>
+    <p>Skriv et tal imellem 0 og 10</p>
+    <input type="number" id="tal" />
+    <button>Tjek tal</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", tjekTal);
+        let forsoeg = 0;
+        const ranNum = Math.floor(Math.random() * 11)
+        //Math.floor gør at det bliver et helt tal, Math.random er i sig selv et tal mellem 1 og 0, derfor ganger man den med feks 11
+
+        function tjekTal() {
+            forsoeg++
+            const brugerTal = document.querySelector("#tal").value;
+            if (ranNum > brugerTal) {
+                alert("Øv" + brugerTal + "var for lavt. Prøv igen :)");
+            } else if (ranNum < brugerTal) {
+                alert("Øv" + brugerTal + "var for højt. Prøv igen :)");
+            } else {
+                alert(brugerTal + "er rigtigt!" + "Du brugte" + forsoeg + "forsøg. Prøv igen :)");
+            }
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
