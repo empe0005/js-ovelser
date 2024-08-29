@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MIN PLAYLISTE</h1>
+    <ul id="playliste"></ul>
+
+    <script>
+        const sange = ["Kærligheden Vinder", "Capable of Love", "On Ur Mind", "Run + Ran", "Forglem os ej", "On Me", "Apple", "Company", "Number 2", "Tillid"];
+        const liste = document.querySelector("ul");
+        sange.forEach(lavSangListe);
+
+        function lavSangListe(sange) {
+            liste.innerHTML += "<li>" + sange + "</li>";
+        }
+    </script>
+</body>
+
+</html>
